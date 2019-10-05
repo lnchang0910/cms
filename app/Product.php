@@ -1,9 +1,10 @@
 <?php
 
 namespace App;
-use Storage;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use Storage;
 
 class Product extends Model
 {
@@ -13,6 +14,9 @@ class Product extends Model
 
     public function getImageUrlAttribute()
     {
+        if (Str::startsWith($this->attributes['image'], ['http://', 'https://'])) {
+            return $this->attributes['image'];
+        }
         return Storage::disk('admin')->url($this->attributes['image']);
     }
 }
