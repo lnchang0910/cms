@@ -395,6 +395,13 @@ return [
     |
     */
     'extensions' => [
-
+        'ckeditor' => [
+            'enable' => true,
+            'config' => [
+                'lang' => 'zh-TW',
+                'height' => 300,
+            ],
+        ],
     ],
+
 ];

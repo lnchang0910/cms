@@ -20,10 +20,11 @@ class UserController extends AdminController
 
     public function index(Content $content)
     {
-        $content->header('Index');
-        $content->description('description');
-        $content->body($this->grid());
-        return $content;
+        return $content
+            ->header('Index')
+            ->description('description')
+            ->body($this->grid());
+
     }
 
     public function show($id, Content $content)
