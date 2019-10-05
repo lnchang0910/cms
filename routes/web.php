@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome')->with('name','tad')->with('say','嗨！');
-});
+Route::get('/', 'ProductController@index')->name('index');
+Route::get('/product', 'ProductController@index')->name('product.index');
 
 Auth::routes();
 
