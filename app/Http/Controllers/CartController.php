@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use Illuminate\Http\Request;
+use App\Http\Requests\CartRequest;
+
 
 class CartController extends Controller
 {
@@ -33,7 +35,7 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CartRequest $request)
     {
         Cart::create([
             'user_id' => $request->user()->id,
