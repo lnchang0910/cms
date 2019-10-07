@@ -19,4 +19,9 @@ class Product extends Model
         }
         return Storage::disk('admin')->url($this->attributes['image']);
     }
+
+    public function carts()
+    {
+        return $this->hasMany('App\Cart');
+    }
 }
