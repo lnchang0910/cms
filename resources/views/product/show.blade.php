@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', $product->title)
 @section('content')
+<div class="container">
     <div class="card">
         <div class="card-body product-info">
             <div class="row">
@@ -27,6 +28,7 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('scriptsAfterJs')
