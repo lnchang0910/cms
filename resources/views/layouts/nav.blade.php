@@ -30,6 +30,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('cart.index') }}" class="nav-link">我的購物車</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('order.index') }}">我的訂單</a>
+                            </li>
                             @section('my_menu')
                                 <li class="nav-item">
                                     <a href="/" class="nav-link">回首頁</a>
